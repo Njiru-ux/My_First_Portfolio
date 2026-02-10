@@ -3,54 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Webpage</title>
+    <title>Eric Njiru - Portfolio</title>
     <style>
-        body { font-family: Arial; max-width: 800px; margin: auto; padding: 20px; }
-        h1 { color: #333; }
-        h2 { color: #555; }
-        h3 { color: #777; }
-        p { margin: 15px 0; }
-        nav { background: #f0f0f0; padding: 10px; margin-bottom: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; color: #0066cc; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        header ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #0066cc;
+        }
+        main {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        article {
+            flex: 3;
+        }
+        aside {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            height: fit-content;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        h3 {
+            color: #777;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .clickable-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .tweet-link {
+            display: inline-block;
+            background: #1DA1F2;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .tweet-link:hover {
+            background: #0d8bd9;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tweets.html">Tweets</a>
-    </nav>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tweets.html">Tweets</a></li>
+        </ul>
+    </header>
     
-    <h1>Welcome to My First Webpage</h1>
+    <main>
+        <article>
+            <h1>Welcome to My Portfolio</h1>
+            
+            <h2>About Me</h2>
+            <p>Hello! I'm Eric Njiru, a software engineering student in the ALX program. This is my first portfolio website where I'm showcasing my journey in web development.</p>
+            
+            <h3>My Learning Journey</h3>
+            <p>I'm currently learning HTML, CSS, and JavaScript as part of the ALX Software Engineering curriculum. This webpage represents my first project in the program.</p>
+            
+            <h2>Project Requirements</h2>
+            <p>This project required creating a valid HTML page with specific elements: at least 4 paragraphs, headings of different levels, and a clickable image.</p>
+            
+            <h3>What I've Learned</h3>
+            <p>Through this project, I've learned about HTML structure, semantic elements, and the importance of valid, accessible code. I've also learned how to embed tweets and create navigation between pages.</p>
+            
+            <p>The ALX program has been challenging but rewarding, and I'm excited to continue growing as a developer.</p>
+            
+            <div class="image-container">
+                <h2>ALX Software Engineering</h2>
+                <a href="https://www.alxafrica.com/" target="_blank">
+                    <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" 
+                         alt="ALX Logo" 
+                         class="clickable-image"
+                         width="400">
+                </a>
+                <p><em>Click the ALX logo to visit the official ALX Africa website</em></p>
+            </div>
+            
+            <a href="tweets.html" class="tweet-link">Check out my favorite tweets →</a>
+        </article>
+        
+        <aside>
+            <p>placeholder to add comment thread later</p>
+        </aside>
+    </main>
     
-    <h2>About This Project</h2>
-    <p>This is my first webpage for the ALX Software Engineering program.</p>
-    
-    <h3>Learning HTML</h3>
-    <p>HTML is the standard markup language for creating web pages.</p>
-    
-    <h2>Web Development</h2>
-    <p>Web development is a crucial skill in today's digital world.</p>
-    
-    <h3>My Goals</h3>
-    <p>I aim to become a proficient full-stack developer through the ALX program.</p>
-    
-    <p>This webpage demonstrates my understanding of basic HTML elements.</p>
-    
-    <div style="text-align: center; margin: 30px 0;">
-        <a href="https://www.alxafrica.com/" target="_blank">
-            <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="ALX Logo" width="300">
-        </a>
-        <p><em>Click the ALX logo to visit their website</em></p>
-    </div>
-    
-    <div style="text-align: center; margin: 20px 0;">
-        <a href="tweets.html" style="background: #1DA1F2; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">
-            View My Tweets
-        </a>
-    </div>
-    
-    <footer style="text-align: center; margin-top: 40px; color: #666;">
-        <p>ALX Software Engineering Program - HTML Basics Project</p>
+    <footer>
+        <p>Made by Eric Njiru - <a href="https://github.com/Njiru-ux" target="_blank">here</a></p>
     </footer>
 </body>
 </html>

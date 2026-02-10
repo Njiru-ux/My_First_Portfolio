@@ -3,50 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tweets</title>
+    <title>Eric Njiru - Favorite Tweets</title>
     <style>
-        body { font-family: Arial; max-width: 800px; margin: auto; padding: 20px; }
-        h1 { color: #333; }
-        nav { background: #f0f0f0; padding: 10px; margin-bottom: 20px; }
-        nav a { margin-right: 15px; text-decoration: none; color: #0066cc; }
-        .tweet-container { margin: 30px 0; }
-        .back-link { display: block; text-align: center; margin: 20px 0; }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        header ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 20px;
+        }
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #0066cc;
+        }
+        main {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        article {
+            flex: 3;
+        }
+        aside {
+            flex: 1;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            height: fit-content;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        .tweet-container {
+            margin: 30px 0;
+            border: 1px solid #e1e8ed;
+            border-radius: 10px;
+            padding: 15px;
+            background: #f8f9fa;
+        }
+        .home-link {
+            display: inline-block;
+            background: #333;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .home-link:hover {
+            background: #555;
+        }
+        .instructions {
+            background: #e8f4ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border-left: 4px solid #1DA1F2;
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="tweets.html">Tweets</a>
-    </nav>
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tweets.html">Tweets</a></li>
+        </ul>
+    </header>
     
-    <h1>My Favorite Tweets</h1>
+    <main>
+        <article>
+            <h1>My Favorite Tweets</h1>
+            
+            <div class="instructions">
+                <h3>About This Page</h3>
+                <p>This page contains embedded tweets that I find inspiring or educational. These tweets showcase various topics related to technology, programming, and software engineering.</p>
+            </div>
+            
+            <h2>ALX & Software Engineering</h2>
+            
+            <div class="tweet-container">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">The ALX Software Engineering program is transforming lives across Africa by providing world-class tech education to aspiring developers. <a href="https://twitter.com/hashtag/ALXSE?src=hash&amp;ref_src=twsrc%5Etfw">#ALXSE</a> <a href="https://twitter.com/hashtag/tech?src=hash&amp;ref_src=twsrc%5Etfw">#tech</a></p>&mdash; ALX Africa (@alx_africa) <a href="https://twitter.com/alx_africa/status/example1">December 1, 2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            
+            <h2>Web Development Tips</h2>
+            
+            <div class="tweet-container">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">Remember: Every website is built with HTML. Mastering the basics is the foundation of web development. <a href="https://twitter.com/hashtag/HTML?src=hash&amp;ref_src=twsrc%5Etfw">#HTML</a> <a href="https://twitter.com/hashtag/webdev?src=hash&amp;ref_src=twsrc%5Etfw">#webdev</a></p>&mdash; Web Dev Tips (@WebDevTip) <a href="https://twitter.com/WebDevTip/status/example2">December 2, 2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            
+            <h2>Coding Motivation</h2>
+            
+            <div class="tweet-container">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">The best way to learn programming is to build projects. Start small, be consistent, and keep coding! <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/learnToCode?src=hash&amp;ref_src=twsrc%5Etfw">#learnToCode</a></p>&mdash; Code Motivation (@CodeMotivation) <a href="https://twitter.com/CodeMotivation/status/example3">December 3, 2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            
+            <div class="tweet-container">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">Software engineering is not just about writing code; it's about solving problems and creating value. <a href="https://twitter.com/hashtag/SoftwareEngineering?src=hash&amp;ref_src=twsrc%5Etfw">#SoftwareEngineering</a> <a href="https://twitter.com/hashtag/programming?src=hash&amp;ref_src=twsrc%5Etfw">#programming</a></p>&mdash; Tech Thoughts (@TechThoughts) <a href="https://twitter.com/TechThoughts/status/example4">December 4, 2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            
+            <a href="index.html" class="home-link">← Back to Homepage</a>
+        </article>
+        
+        <aside>
+            <p>placeholder to add comment thread later</p>
+        </aside>
+    </main>
     
-    <p>This page contains embedded tweets from Twitter.</p>
-    
-    <div class="tweet-container">
-        <h2>Example Tweet 1</h2>
-        <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">Learning web development with ALX Africa. Excited to start this journey! <a href="https://twitter.com/hashtag/ALX?src=hash&amp;ref_src=twsrc%5Etfw">#ALX</a> <a href="https://twitter.com/hashtag/SoftwareEngineering?src=hash&amp;ref_src=twsrc%5Etfw">#SoftwareEngineering</a></p>
-            &mdash; ALX Learner (@ALX_Learner) <a href="https://twitter.com/ALX_Learner/status/1234567890123456789?ref_src=twsrc%5Etfw">December 1, 2023</a>
-        </blockquote>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-    
-    <div class="tweet-container">
-        <h2>Example Tweet 2</h2>
-        <blockquote class="twitter-tweet">
-            <p lang="en" dir="ltr">Just completed my first HTML page for the ALX project. HTML is the foundation of the web! <a href="https://twitter.com/hashtag/HTML?src=hash&amp;ref_src=twsrc%5Etfw">#HTML</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a></p>
-            &mdash; Web Dev Student (@WebDevStudent) <a href="https://twitter.com/WebDevStudent/status/1234567890123456790?ref_src=twsrc%5Etfw">December 2, 2023</a>
-        </blockquote>
-        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
-    
-    <a href="index.html" class="back-link" style="background: #0066cc; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">
-        Back to Homepage
-    </a>
-    
-    <footer style="text-align: center; margin-top: 40px; color: #666;">
-        <p>ALX Software Engineering Program - HTML Basics Project</p>
+    <footer>
+        <p>Made by Eric Njiru - <a href="https://github.com/Njiru-ux" target="_blank">here</a></p>
     </footer>
 </body>
 </html>
