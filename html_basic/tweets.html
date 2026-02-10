@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Tweets - ALX Portfolio</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Navigation */
+        nav {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        /* Headings */
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin: 25px 0 15px;
+        }
+        
+        /* Tweets container */
+        .tweets-container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .tweet-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .tweet-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Embedded tweet styling */
+        .twitter-tweet {
+            margin: 20px auto !important;
+            max-width: 550px !important;
+        }
+        
+        /* Instructions section */
+        .instructions {
+            background: #e8f4ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            border-left: 5px solid #3498db;
+        }
+        
+        .instructions h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+        
+        .home-link {
+            display: inline-block;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .home-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-links a {
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Ìø† Home</a></li>
+                <li><a href="tweets.html">Ì∞¶ Tweets</a></li>
+            </ul>
+        </nav>
+        
+        <h1>My Favorite Tweets Collection</h1>
+        
+        <div class="instructions">
+            <h3>Ì≥± How to Embed Tweets</h3>
+            <p>To embed a tweet in your webpage, go to Twitter, click the three dots on a tweet, select "Embed Tweet", and copy the HTML code provided by Twitter. Then paste it into your HTML file.</p>
+        </div>
+        
+        <div class="tweets-container">
+            <h2>Ìæì ALX & Tech Education Tweets</h2>
+            
+            <!-- Embedded Tweet 1: ALX Africa -->
+            <div class="tweet-card">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">We are pleased to announce our new partnership with ALX Africa to provide software engineering training to 10,000 young Africans over the next 3 years! Ì∫Ä<br><br>This initiative aims to bridge the digital skills gap and create opportunities in the tech industry. <a href="https://twitter.com/hashtag/ALX?src=hash&amp;ref_src=twsrc%5Etfw">#ALX</a> <a href="https://twitter.com/hashtag/TechEducation?src=hash&amp;ref_src=twsrc%5Etfw">#TechEducation</a> <a href="https://t.co/example123">pic.twitter.com/example123</a></p>&mdash; ALX Africa (@alx_africa) <a href="https://twitter.com/alx_africa/status/1678901234567890?ref_src=twsrc%5Etfw">December 15, 2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            
+            <!-- Embedded Tweet 2: Tech Inspiration -->
+            <div class="tweet-card">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">The best way to predict the future is to create it. In tech, this means continuously learning, building, and innovating. Every line of code you write is a step toward shaping tomorrow. <a href="https://twitter.com/hashtag/Programming?src=hash&amp;ref_src=twsrc%5Etfw">#Programming</a> <a href="https://twitter.com/hashtag/WebDevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#WebDevelopment</a> <a href="https://twitter.com/hashtag/ALX_SE?src=hash&amp;ref_src=twsrc%5Etfw">#ALX_SE</a></p>&mdash; Tech Inspiration (@tech_inspire) <a href="https://twitter.com/tech_inspire/status/1678912345678901?ref_src=twsrc%5Etfw">December 16, 2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            
+            <h2>Ì≤° Web Development Tips</h2>
+            
+            <!-- Embedded Tweet 3: Web Dev Tips -->
+            <div class="tweet-card">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">HTML/CSS Tip: Always validate your HTML with the W3C Validator! It catches errors you might miss and ensures your code follows web standards. Clean, valid HTML = better accessibility + SEO + maintainability. <a href="https://twitter.com/hashtag/HTML?src=hash&amp;ref_src=twsrc%5Etfw">#HTML</a> <a href="https://twitter.com/hashtag/CSS?src=hash&amp;ref_src=twsrc%5Etfw">#CSS</a> <a href="https://twitter.com/hashtag/WebDev?src=hash&amp;ref_src=twsrc%5Etfw">#WebDev</a></p>&mdash; Web Dev Tips (@WebDevDaily) <a href="https://twitter.com/WebDevDaily/status/1678923456789012?ref_src=twsrc%5Etfw">December 17, 2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+            
+            <!-- Embedded Tweet 4: Coding Motivation -->
+            <div class="tweet-card">
+                <blockquote class="twitter-tweet">
+                    <p lang="en" dir="ltr">Day 45 of <a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a>: Just completed my portfolio website! Remember, consistency beats talent when talent isn't consistent. Keep coding, keep learning! <a href="https://twitter.com/hashtag/ALX?src=hash&amp;ref_src=twsrc%5Etfw">#ALX</a> <a href="https://twitter.com/hashtag/SoftwareEngineering?src=hash&amp;ref_src=twsrc%5Etfw">#SoftwareEngineering</a> <a href="https://t.co/example456">pic.twitter.com/example456</a></p>&mdash; Code Journey (@CodeJourney) <a href="https://twitter.com/CodeJourney/status/1678934567890123?ref_src=twsrc%5Etfw">December 18, 2023</a>
+                </blockquote>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Ì¥ó Important Notes</h3>
+            <p>These are example tweets using Twitter's embed format. To embed real tweets, visit Twitter, find a tweet you want to embed, click the three dots (‚Ä¢‚Ä¢‚Ä¢), select "Embed Tweet", and copy the generated HTML code.</p>
+            <p>Twitter embed code includes a <code>&lt;script&gt;</code> tag that loads the Twitter widgets.js file, which makes the tweets interactive (like, retweet buttons, etc.).</p>
+        </div>
+        
+        <footer>
+            <a href="index.html" class="home-link">‚Üê Back to Homepage</a>
+            <p>Created for ALX Software Engineering Program ‚Ä¢ HTML Basics Project</p>
+            <p>Note: Tweets shown are examples. Replace with actual tweet embed codes from Twitter.</p>
+        </footer>
+    </div>
+</body>
+</html>
