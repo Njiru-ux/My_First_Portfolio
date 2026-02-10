@@ -5,292 +5,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eric Njiru - Personal Portfolio</title>
     <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
+        body { 
+            font-family: Arial, sans-serif; 
+            line-height: 1.6; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+            padding: 20px; 
             background-color: #f8f9fa;
         }
-        
-        /* Header styles */
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        header { 
+            text-align: center; 
+            padding: 40px 0; 
+            background: linear-gradient(to right, #667eea, #764ba2);
             color: white;
-            padding: 80px 20px;
-            text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px; 
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
-        header h1 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        header h1 { 
+            margin-bottom: 10px; 
+            font-size: 2.5em;
         }
-        
-        header p {
-            font-size: 1.4rem;
-            max-width: 600px;
-            margin: 0 auto;
-            opacity: 0.9;
+        nav { 
+            background: #2c3e50; 
+            padding: 15px; 
+            margin-bottom: 30px; 
+            border-radius: 8px;
         }
-        
-        /* Navigation styles */
-        nav {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        nav ul { 
+            list-style: none; 
+            display: flex; 
+            justify-content: center; 
+            gap: 30px; 
+            margin: 0;
+            padding: 0;
         }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            padding: 15px 0;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        nav li {
-            margin: 0 15px;
-        }
-        
-        nav a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-            font-size: 1.1rem;
+        nav a { 
+            color: white; 
+            text-decoration: none; 
+            font-weight: bold;
             padding: 8px 16px;
             border-radius: 4px;
-            transition: all 0.3s ease;
+            transition: background 0.3s;
         }
-        
-        nav a:hover {
-            background-color: #667eea;
-            color: white;
+        nav a:hover { 
+            background: rgba(255,255,255,0.1);
         }
-        
-        /* Section styles */
-        section {
-            max-width: 1200px;
-            margin: 0 auto 60px;
-            padding: 0 20px;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-            text-align: center;
-        }
-        
-        h3 {
-            color: #34495e;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        
-        /* Introduction section */
-        #introduction p {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            background-color: white;
+        section { 
+            margin-bottom: 50px; 
+            background: white;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        
-        /* Projects section */
-        #projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        h2 { 
+            border-bottom: 3px solid #667eea; 
+            padding-bottom: 10px; 
+            margin-bottom: 20px; 
+            color: #2c3e50;
         }
-        
-        .project {
-            background-color: white;
-            border-radius: 10px;
-            padding: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        .project { 
+            background: #f8f9fa; 
+            padding: 20px; 
+            margin-bottom: 20px; 
+            border-left: 4px solid #667eea; 
+            border-radius: 4px;
         }
-        
-        .project:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
         .project h3 {
-            color: #667eea;
+            color: #2c3e50;
+            margin-top: 0;
         }
-        
-        .project p {
-            margin-bottom: 20px;
-            color: #666;
-        }
-        
         .project a {
             display: inline-block;
-            background-color: #667eea;
+            background: #667eea;
             color: white;
-            padding: 10px 20px;
+            padding: 8px 16px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background-color 0.3s ease;
+            border-radius: 4px;
+            font-weight: bold;
         }
-        
         .project a:hover {
-            background-color: #764ba2;
+            background: #764ba2;
         }
-        
-        /* About Me section */
-        #about {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        footer { 
+            text-align: center; 
+            padding: 20px; 
+            background: #2c3e50; 
+            color: white; 
+            margin-top: 50px; 
+            border-radius: 8px;
         }
-        
-        #about p, #about ul {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-        
-        #about ul {
-            list-style-position: inside;
-            padding-left: 20px;
-        }
-        
-        #about li {
-            margin-bottom: 10px;
-        }
-        
         .skills {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 20px;
+            margin: 20px 0;
         }
-        
         .skill-tag {
-            background-color: #e8f4ff;
-            color: #3498db;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
+            background: #e8f4ff;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
         }
-        
-        /* Contact section */
-        #contact {
-            background-color: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        #contact p {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-icon {
-            margin-right: 10px;
-            font-size: 1.4rem;
-        }
-        
-        #contact a {
+        .contact-links a {
             color: #667eea;
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
+            font-weight: bold;
         }
-        
-        #contact a:hover {
-            color: #764ba2;
+        .contact-links a:hover {
             text-decoration: underline;
-        }
-        
-        /* Footer styles */
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-        
-        footer p {
-            font-size: 1rem;
-            opacity: 0.8;
-        }
-        
-        /* Responsive design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5rem;
-            }
-            
-            header p {
-                font-size: 1.1rem;
-            }
-            
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            nav li {
-                margin: 5px 0;
-            }
-            
-            #projects {
-                grid-template-columns: 1fr;
-            }
-            
-            section {
-                padding: 0 15px;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            #introduction p,
-            #about,
-            #contact {
-                padding: 20px;
-            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Eric Njiru</h1>
-        <p>Full Stack Developer | ALX Software Engineering Student | Problem Solver</p>
+        <p>Software Engineering Student | ALX Program | Web Developer</p>
     </header>
     
     <nav>
@@ -304,51 +134,34 @@
     
     <section id="introduction">
         <h2>Introduction</h2>
-        <p>Hello! I'm Eric Njiru, a passionate software engineering student currently enrolled in the ALX Software Engineering program. I specialize in building responsive, user-friendly web applications using modern technologies. With a strong foundation in HTML, CSS, and JavaScript, I'm continuously expanding my skills to become a proficient full-stack developer. I believe in writing clean, efficient code and creating solutions that make a positive impact.</p>
+        <p>Hello! I'm Eric Njiru, a passionate software engineering student currently enrolled in the ALX Software Engineering program. I specialize in building responsive, user-friendly web applications using modern technologies. With a strong foundation in HTML, CSS, and JavaScript, I'm continuously expanding my skills to become a proficient full-stack developer.</p>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
         
         <article class="project">
-            <h3>My First Portfolio Website</h3>
-            <p>A responsive portfolio website built with HTML5 and CSS3, featuring semantic markup, clean design, and proper document structure. This project demonstrates my understanding of modern web development principles and accessibility standards.</p>
+            <h3>Portfolio Website</h3>
+            <p>A responsive portfolio website built with HTML5 and CSS3, featuring semantic markup, clean design, and proper document structure. This project demonstrates my understanding of modern web development principles.</p>
             <a href="../html_basic/index.html" target="_blank">View Project</a>
         </article>
         
         <article class="project">
-            <h3>Tweets Embedding Project</h3>
-            <p>A web page that demonstrates how to embed tweets using Twitter's official embed code. This project showcases my ability to integrate third-party content while maintaining a consistent design and user experience.</p>
+            <h3>Tweets Embedding Page</h3>
+            <p>A web page that demonstrates how to embed tweets using Twitter's official embed code. This project showcases my ability to integrate third-party content while maintaining a consistent design.</p>
             <a href="../html_basic/tweets.html" target="_blank">View Project</a>
         </article>
         
         <article class="project">
             <h3>ALX Learners Directory</h3>
-            <p>A dynamic table implementation displaying information about ALX learners. This project features responsive table design with proper semantic HTML structure, including thead and tbody elements for accessibility and SEO optimization.</p>
-            <a href="../html_basic/index.html#table" target="_blank">View Project</a>
-        </article>
-        
-        <article class="project">
-            <h3>Personal Blog Platform</h3>
-            <p>A responsive blog platform with comment threads, user authentication, and content management features. Built with HTML, CSS, and JavaScript, focusing on clean design and user experience.</p>
-            <a href="#" target="_blank">View Project (Coming Soon)</a>
+            <p>A table implementation displaying information about ALX learners. This project features proper HTML table structure with thead and tbody elements for accessibility and SEO optimization.</p>
+            <a href="../html_basic/index.html" target="_blank">View Project</a>
         </article>
     </section>
     
     <section id="about">
         <h2>About Me</h2>
-        
         <p>I'm a dedicated software engineering student with a passion for creating innovative web solutions. My journey in tech began with curiosity about how websites work, which led me to pursue formal education in software development through the ALX program.</p>
-        
-        <h3>Background</h3>
-        <p>Currently enrolled in the ALX Software Engineering program, where I'm gaining hands-on experience with:</p>
-        <ul>
-            <li>Front-end technologies (HTML5, CSS3, JavaScript)</li>
-            <li>Version control with Git and GitHub</li>
-            <li>Command line interface and Linux basics</li>
-            <li>Responsive web design principles</li>
-            <li>Web accessibility standards</li>
-        </ul>
         
         <h3>Skills</h3>
         <div class="skills">
@@ -359,36 +172,20 @@
             <span class="skill-tag">Git & GitHub</span>
             <span class="skill-tag">Command Line</span>
             <span class="skill-tag">Web Accessibility</span>
-            <span class="skill-tag">Problem Solving</span>
-            <span class="skill-tag">UI/UX Principles</span>
         </div>
         
         <h3>Hobbies & Interests</h3>
-        <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, reading tech blogs, or hiking. I believe in continuous learning and enjoy staying updated with the latest trends in web development.</p>
+        <p>When I'm not coding, you can find me exploring new technologies, reading tech blogs, or hiking. I believe in continuous learning and enjoy staying updated with the latest trends in web development.</p>
     </section>
     
     <section id="contact">
         <h2>Contact</h2>
-        
-        <p>
-            <span class="contact-icon">í³§</span>
-            Email: <a href="mailto:eric.njiru@example.com">eric.njiru@example.com</a>
-        </p>
-        
-        <p>
-            <span class="contact-icon">í²¼</span>
-            LinkedIn: <a href="https://linkedin.com/in/eric-njiru" target="_blank">linkedin.com/in/eric-njiru</a>
-        </p>
-        
-        <p>
-            <span class="contact-icon">í°™</span>
-            GitHub: <a href="https://github.com/Njiru-ux" target="_blank">github.com/Njiru-ux</a>
-        </p>
-        
-        <p>
-            <span class="contact-icon">í°¦</span>
-            Twitter: <a href="https://twitter.com/eric_njiru" target="_blank">twitter.com/eric_njiru</a>
-        </p>
+        <div class="contact-links">
+            <p><strong>Email:</strong> <a href="mailto:eric.njiru@example.com">eric.njiru@example.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/eric-njiru" target="_blank">linkedin.com/in/eric-njiru</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/Njiru-ux" target="_blank">github.com/Njiru-ux</a></p>
+            <p><strong>Twitter:</strong> <a href="https://twitter.com/eric_njiru" target="_blank">twitter.com/eric_njiru</a></p>
+        </div>
     </section>
     
     <footer>
